@@ -5,7 +5,6 @@ Thank you for participating in the iOS Architecture Bootcamp!
 This README file contains the instructions to complete the challenge for the iOS Architecture Bootcamp.
 
 ## Main Deliverables
-
 - **Add a logout button to the search window**
   - You can use the top left or right (navigation bar) to display the button
   
@@ -16,7 +15,7 @@ This README file contains the instructions to complete the challenge for the iOS
   
   - There should be no action on albums, if the user selects an album an alert can be displayed with the message "Working with mvvm is great!*
 
-  > \*_Hint:_ Hint: The iTunes API is limited, but since we are engineers we can play around with it. When searching for a song the result shows different artists but when searching for an artist the result shows the same artist. If the search result shows the first 5 elements with the same artist (artistId) it means that the artist was searched, therefore the albums can be displayed.*
+  > \**Hint:** The iTunes API is limited, but since we are engineers we can play around with it. When searching for a song the result shows different artists but when searching for an artist the result shows the same artist. If the search result shows the first 5 elements with the same artist (artistId) it means that the artist was searched, therefore the albums can be displayed.
   
 - **Implement save option by tapping button with three dots in cell**
   - There should be a popup saying add to favorites
@@ -33,7 +32,6 @@ This README file contains the instructions to complete the challenge for the iOS
   - **Extra**: Allow sorting alphabetically or by creation date
   
 ## Extra
-
 - **Modify the UI for the song cell, it would look nice to show an image on the left side or if you want it is also valid to completely modify the UI with the colors**
   - In case of displaying song image, existing caching mechanism like [KingFisher](https://github.com/onevcat/Kingfisher) can be implemented
   
@@ -42,4 +40,14 @@ This README file contains the instructions to complete the challenge for the iOS
   
   - Save songs together with a user attribute (the active user in the application)
 
+## About the iTunes API
+[Documentation](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 
+### Search examples:
+**Simple Plan** -> https://itunes.apple.com/search?term=Simpleplan&media=music&entity=song
+
+**Song (Dakiti)** -> https://itunes.apple.com/search?media=music&term=Dakiti&entity=song
+
+**Search by Simple Plan ID** -> https://itunes.apple.com/lookup?id=150861&entity=album
+
+> **Note:** The first 5 results for the Simple Plan search contain the same artistId, but the first 5 results for the Dakiti song search show a different artistId.
